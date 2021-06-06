@@ -41,7 +41,7 @@ x get_flag
 
 `GET_FLAG` = `0x0000000000401216`.
 
-So our payload needs to be as follow : 264 chars + `GET_FLAG`, taking into account the 264 chars must have no `\0` (a NULL BYTE) otherwise the program will stop reading chars,but because of the `RC4` encryption we are not able to pass the payload as it is because it will be encrypted and we lose the address of `GET_FLAG`,so we need to encrypt it ourselve first then to send the resulted text to the binary because when the it tries to encrypt our input we will get the payload we want.
+So our payload needs to be as follow : 264 chars + `GET_FLAG`, taking into account the 264 chars must have no `\0` (a NULL BYTE) otherwise the program will stop reading chars,but because of the `RC4` encryption we are not able to pass the payload as it is because it will be encrypted and we lose the address of `GET_FLAG`,so we need to encrypt it ourselve first then to send the resulted text to the binary because when the it tries to encrypt our input we will get the payload we want, i tried several prefix padding in order to not have a `NULL BYTE` in the middle when payload gets encrypted.
 
 And Voila : `IngeHack{ch0$3n_c1ph3rt3xt_4tt4ck_1npwn!!}`
 
