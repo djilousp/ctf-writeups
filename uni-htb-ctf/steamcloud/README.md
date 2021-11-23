@@ -2,13 +2,13 @@
 
 ## SteamCloud Cloud category challenge write-up :
 
-![Screen Shot 2021-11-22 at 1.28.11 PM.png](Uni%20CTF%202021%20Quals%20dc8e6360786143cc9d5deb9cf7d5bdc0/Screen_Shot_2021-11-22_at_1.28.11_PM.png)
+![Challenge Description](images/Screen_Shot_2021-11-22_at_1.28.11_PM.png)
 
 Last weekend me and my team #Heaven's_Birds participated in Uni CTF 2021 Quals organized by @ HacktheBox .
 
 From the description we knew we were dealing with a k8s cluster. First we attempted to scan the host address we got after starting the machine ( which was different than the node's address running the cluster).
 
-![Screen Shot 2021-11-23 at 12.12.08 PM.png](Uni%20CTF%202021%20Quals%20dc8e6360786143cc9d5deb9cf7d5bdc0/Screen_Shot_2021-11-23_at_12.12.08_PM.png)
+![Machine Data](images/Screen_Shot_2021-11-23_at_12.12.08_PM.png)
 
 Basically we expected some K8s ports to be opened( See: [https://kubernetes.io/docs/reference/ports-and-protocols/](https://kubernetes.io/docs/reference/ports-and-protocols/) ), after running `nmap -sC -p-` on host and as expected we found the **Kubelet API** port opened **10250.**
 
